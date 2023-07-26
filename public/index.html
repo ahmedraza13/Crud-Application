@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body onload="getAllPost()">
+
+    <div class="container">
+
+        <h1>Create a Post</h1>
+
+        <form id="postForm" onsubmit="createPost(); return false">
+
+           
+
+            <div class="form-group">
+
+                <label for="postTitle">Title:</label>
+
+                <input type="text" id="postTitle" required>
+
+            </div>
+
+            <div class="form-group">
+
+                <label for="postText">Text:</label>
+
+                <textarea id="postText" rows="4" required></textarea>
+
+            </div>
+
+            <button type="submit" class="submitButton">Submit</button>
+
+        </form>
+
+    </div>
+
+
+    <div id="result"></div>
+    <br>
+    <br>
+    <div id="posts"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.js"></script>
+
+    <script type="module" src="app.mjs"></script>
+
+</body>
+
+</html>
